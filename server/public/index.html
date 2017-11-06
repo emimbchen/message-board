@@ -28,6 +28,10 @@
     </form>
     <div class="container">
         <!-- place for messages -->
+        <div ng-repeat="message in mc.result.data">
+            <p>Name: {{message.name}}</p>
+            <p>Message: {{message.name}}</p>
+        </div>
     </div>
 </div>
 </body>

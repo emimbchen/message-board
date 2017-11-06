@@ -6,7 +6,7 @@ var messages = require('./router/message.router.js');
 
 //mongoose
 var mongoose = require('mongoose');
-var databaseUrl = 'mongod://localhost:27017/message';
+var databaseUrl = 'mongodb://localhost:27017/message';
 
 mongoose.connection.on('connected', function(){
     console.log('we got a mongoose');

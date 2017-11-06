@@ -7,12 +7,13 @@ var MessageSchema = new Schema({ name: String, message: String});
 var Message = mongoose.model('message', MessageSchema, 'messages');
 
 //get
-router.get('/', function( req, res){
+router.get('/', function(req,res){
     Message.find({}, function(err, foundMessage){
         if(err){
             console.log('Error in Message get: ', err);
         } else{
             res.send(foundMessage);
+            console.log('sending messages!');
         }
     });
 });
