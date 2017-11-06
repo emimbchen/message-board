@@ -17,11 +17,11 @@ Message board where you can post messages and view other messages.
 
 To Do:
 
-- [ ] Spin up server & mongoose
+- [x] Spin up server & mongoose
 - [ ] Set up Database
-- [ ] basic html with inputs and submit button
-- [ ] set up controller
-- [ ] Source all in html
+- [x] basic html with inputs and submit button
+- [x] set up controller
+- [x] Source all in html
 - [ ] Set up Post route
 - [ ] set up get route
 - [ ] display all on the dom
