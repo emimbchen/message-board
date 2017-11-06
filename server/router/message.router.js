@@ -11,22 +11,22 @@ router.get('/', function(req,res){
     Message.find({}, function(err, foundMessage){
         if(err){
             console.log('Error in Message get: ', err);
-        } else{
-            res.send(foundMessage);
+        } else {
             console.log('sending messages!');
+            res.send(foundMessage);
         }
     });
 });
 
 //post
-
 router.post('/', function (req ,res){
     console.log(req.body);
     var messageToAdd = new Message(req.body);
     messageToAdd.save(function (err, data){
         if(err) {
             console.log("error in the message Post: ", err);
-        } else{
+        }else{
+            console.log("successful post");
             res.sendStatus(201);
         }
     });

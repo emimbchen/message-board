@@ -13,7 +13,7 @@
     <title>Message Board</title>
 </head>
 <body ng-app= "myApp">
-    <h1>Message Board</h1>
+    <h1 class="jumbotron">Message Board</h1>
 <div class="container" ng-controller="MessageController as mc">
     <form class="form-horizontal col-md-4">
         <div class="form-group">
@@ -25,12 +25,12 @@
             <input class="form-control" type="text" placeholder="Message" ng-model="mc.object.message">
         </div>
         <button ng-click="mc.submit(mc.object)" class="btn btn-primary">Submit</button>
-    </form>
+    </form> <br>
     <div class="container">
         <!-- place for messages -->
-        <div ng-repeat="message in mc.result.data">
+        <div id="messages" ng-repeat="message in mc.results.data">
             <p>Name: {{message.name}}</p>
-            <p>Message: {{message.name}}</p>
+            <p>Message: {{message.message}}</p>
         </div>
     </div>
 </div>
